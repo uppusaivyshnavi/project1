@@ -1,0 +1,126 @@
+Movie Recommendation System
+Overview
+This project is a Machine Learning–based Movie Recommendation System that suggests movies based on user preferences using:
+
+ Collaborative Filtering – recommends movies based on what similar users liked
+ Content-Based Filtering – recommends movies with similar genres
+ Streamlit Web App – interactive interface for recommendations
+ Jupyter Notebook – for exploration and testing
+
+Project Structure
+bash
+Copy
+Edit
+movie_recommender/
+├── movie_recommender.ipynb      # Notebook for testing & EDA
+├── recommender.py               # Core recommendation logic
+├── app.py                       # Streamlit web UI
+├── movies.csv                   # MovieLens dataset (movies info)
+├── ratings.csv                  # MovieLens dataset (user ratings)
+├── requirements.txt             # Dependencies
+└── README.md                    # Project documentation
+ Technologies Used
+Python 3.8+
+
+Pandas – Data handling
+
+Scikit-learn – Cosine similarity, TF-IDF
+
+Streamlit – Web app interface
+
+MovieLens Dataset – Movies & ratings data
+
+ Dataset
+We are using the MovieLens ml-latest-small dataset:
+
+movies.csv – Contains movie titles & genres
+
+ratings.csv – Contains user ratings for movies
+
+Download here: MovieLens Dataset
+
+How to Run
+ Notebook Version (Exploration & Testing)
+Open movie_recommender.ipynb in Jupyter Notebook or Google Colab.
+
+Upload movies.csv & ratings.csv when prompted.
+
+Run all cells – enter a movie title (e.g., Toy Story (1995)) – see recommendations.
+
+ Streamlit Web App Version
+Install dependencies:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Run the Streamlit app:
+
+bash
+Copy
+Edit
+streamlit run app.py
+The app will open in your browser:
+
+Enter a movie title
+
+Choose Collaborative or Content-Based filtering
+
+See top 5 recommendations 🎯
+
+ Features
+ Collaborative Filtering – Based on similar users’ ratings
+ Content-Based Filtering – Based on movie genres
+ Simple UI – Built with Streamlit for ease of use
+ Scalable – Can be extended with more features like:
+
+ Sentiment analysis from reviews
+
+ Hybrid filtering (combine collaborative + content)
+
+ Requirements
+Install all dependencies via:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+requirements.txt
+
+nginx
+Copy
+Edit
+pandas
+scikit-learn
+streamlit
+ Example Output
+ Input:
+Toy Story (1995)
+
+ Collaborative Filtering Recommendations:
+
+markdown
+Copy
+Edit
+1. Toy Story 2 (1999)
+2. Bug's Life, A (1998)
+3. Monsters, Inc. (2001)
+4. Finding Nemo (2003)
+5. Incredibles, The (2004)
+Content-Based Filtering Recommendations:
+
+markdown
+Copy
+Edit
+1. Jumanji (1995)
+2. Tom and Huck (1995)
+3. Babe (1995)
+4. Aladdin (1992)
+5. Mulan (1998)
+ Future Enhancements
+ Add user login & profile storage for personalized recommendations
+
+ Integrate real-time movie API (like TMDb) for up-to-date data
+
+ Add review-based sentiment analysis to refine recommendations
+
